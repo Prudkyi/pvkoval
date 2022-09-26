@@ -1,10 +1,9 @@
-$color-1: #2fb697;
-$color-2: #14d069;
-$color-3: #ffe611;
-$color-3-hover: #ffec4f;
-$color-4: #777777;
-$color-gold: #fcfbf1;
-$color-gold-shadow: #D6C046;
+// color
+$color-main: #202020;
+$color-for-blackFon: #ffffff;
+
+// BG Color
+$bg-color-main: #38394E;
 
 // bnt color
 $btn-1-text: #ffffff;
@@ -12,7 +11,29 @@ $btn-1-bg: #14d069;
 $btn-1-hover-bg: #21f17f;
 
 // fonts
-
-$fontRegular: "realway_f";
-$fontBlack: "realway_b";
 $indexFontSize: calc(1vw + 1vh);
+
+$font-CormorantGaramond: "CormorantGaramond";
+$font-arial: "arial";
+$font-georgia: "Georgia";
+$font-gothampro_black: "gothampro_black";
+$font-gothampro: "gothampro";
+$font-gothampro_bold: "gothampro_bold";
+$font-gothampro_bolditalic: "gothampro_bolditalic";
+$font-gothampro_blackitalic: "gothampro_blackitalic";
+$font-gothampro_lightitalic: "gothampro_lightitalic";
+$font-gothampro_light: "gothampro_light";
+$font-gothampro_italic: "gothampro_italic";
+$font-gothampro_mediumitalic: "gothampro_mediumitalic";
+$font-HelveticaBlackItalic: "HelveticaBlackItalic";
+$font-gothampro_medium: "gothampro_medium";
+$HelveticaBold-HelveticaBold: "HelveticaBold";
+$HelveticaBlack: "HelveticaBlack";
+$HelveticaBoldItalic: "HelveticaBoldItalic";
+$HelveticaHeavy: "HelveticaHeavy";
+$HelveticaHeavyItalic: "HelveticaHeavyItalic";
+$HelveticaLightItalic: "HelveticaLightItalic";
+$HelveticaLight: "HelveticaLight";
+$HelveticaLight: "HelveticaLight";
+$HelveticaMediumItaicl: "HelveticaMediumItaicl";
+$HelveticaMedium: "HelveticaMedium";

@@ -1,0 +1,57 @@
+@import "virable/main_var";
+@import "mixins/main_mixins";
+@import "libre/grid";
+@import "libre/main_libre";
+@import "fonts";
+
+
+.nav {
+  background-color: $bg-color-main;
+  & > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    img {
+      width: 60px;
+      height: 60px;
+      margin: 10px 0;
+    }
+  }
+  &__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0 30px;
+    padding: 0;
+    li {
+      padding: 0;
+      margin: 0 15px;
+    }
+    a {
+      color: $color-for-blackFon;
+      font-family: $font-gothampro;
+      text-transform: uppercase;
+      font-size: 17px;
+      text-decoration: none;
+    }
+  }
+  &__contact {
+    text-align: center;
+    a {
+      text-decoration: none;
+      color: $color-for-blackFon;
+      font-size: 18px;
+
+    }
+  }
+  &__btn {
+    display: none;
+    @mixin __sm {
+      display: block;
+    }
+  }
+}
