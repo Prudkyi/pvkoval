@@ -1,0 +1,16 @@
+@import "../virable/main_var";
+
+%btn-1 {
+  border-radius: 7px;
+  padding: 10px 25px 9px;
+  margin: 0;
+  box-shadow: 1px 1px 3px #111111;
+  font-size: 20px;
+  text-transform: uppercase;
+  position: relative;
+  transition: all 0.2s;
+}
+%gold-color {
+  color: #fcfbf1;
+  text-shadow: 0 0 15px #D6C046;
+}
