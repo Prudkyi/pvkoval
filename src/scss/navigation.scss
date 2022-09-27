@@ -4,20 +4,52 @@
 @import "libre/main_libre";
 @import "fonts";
 
+.header {
+  height: $size-menu;
+  top: -$size-menu;
+  transition: top .3s;
+  text-align: center;
+}
+.header.fixed {
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+.header.fixed ~ #oneSection {
+  margin-top: 80px;
+}
 
 .nav {
   background-color: $bg-color-main;
-  & > div {
+  font-family: $font-gothampro;
+  position: relative;
+  z-index: 2000;
+  @extend %box-shadow-1;
+  @include _xl {
+    box-shadow: none;
+  }
+  .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: $size-menu;
+    position: relative;
+    z-index: 2000;
+    @include _xl {
+      justify-content: center;
+    }
   }
-
   &__logo {
+    position: relative;
+    z-index: 2000;
     img {
       width: 60px;
       height: 60px;
       margin: 10px 0;
+    }
+    @include _xl {
+      width: 100%;
+      order: 2;
     }
   }
   &__menu {
@@ -27,31 +59,156 @@
     list-style: none;
     margin: 0 30px;
     padding: 0;
+    position: relative;
+    z-index: 2000;
+    @include _xl {
+      display: none;
+    }
     li {
-      padding: 0;
       margin: 0 15px;
     }
     a {
       color: $color-for-blackFon;
-      font-family: $font-gothampro;
       text-transform: uppercase;
       font-size: 17px;
       text-decoration: none;
-    }
-  }
-  &__contact {
-    text-align: center;
-    a {
-      text-decoration: none;
-      color: $color-for-blackFon;
-      font-size: 18px;
+      position: relative;
+      @include _xxl {
+        font-size: 15px;
+      }
+      &::after {
+        transition: all .3s;
+        content: '';
+        width: 0;
+        height: 3px;
+        background-color: $bg-color-thue;
+        position: absolute;
+        left: 0;
+        bottom: -7px;
+      }
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
 
     }
   }
+  &__contact {
+    position: relative;
+    z-index: 2000;
+    @include _xl {
+      display: none;
+    }
+    i {
+      margin-right: 7px;
+      color: $bg-color-thue;
+    }
+    a {
+      text-decoration: none;
+      color: $color-for-blackFon;
+      font-size: 15px;
+      position: relative;
+      @include _xxl {
+        font-size: 12px;
+      }
+      &::after {
+        transition: all .3s;
+        content: '';
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        border-bottom: 1px dashed $bg-color-thue;
+        opacity: 0;
+      }
+      &:hover {
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
   &__btn {
+    position: relative;
+    z-index: 2000;
     display: none;
-    @mixin __sm {
-      display: block;
+    i {
+      position: relative;
+      top: 1px;
+      font-size: 40px;
+      cursor: pointer;
+      color: $color-for-blackFon;
+    }
+    @include _xl {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      order: 3;
+    }
+  }
+  &__endImg {
+    position: relative;
+    z-index: 2000;
+    img {
+      height: 40px;
+    }
+    @include _xl {
+      width: 100%;
+      order: 1;
+      display: flex;
+      justify-content: flex-start;
+    }
+  }
+}
+.navmob {
+  display: none;
+  width: 100%;
+  justify-content: flex-end;
+  padding: 40px 20px 15px;
+  position: absolute;
+  top: $size-menu;
+  background-color: $bg-color-main;
+  z-index: 1000;
+  border-top: 1px solid $bg-color-thue;
+  @extend %box-shadow-1;
+  &__menu {
+    position: relative;
+    text-align: right;
+    list-style: none;
+    z-index: 1000;
+    li {
+      margin-bottom: 15px;
+      i {
+        margin-right: 7px;
+        color: $bg-color-thue;
+      }
+    }
+    a {
+      color: $color-for-blackFon;
+      text-transform: uppercase;
+      font-size: 17px;
+      text-decoration: none;
+      position: relative;
+      &::after {
+        transition: all .3s;
+        content: '';
+        width: 0;
+        height: 3px;
+        background-color: $bg-color-thue;
+        position: absolute;
+        left: 0;
+        bottom: -7px;
+      }
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+    &--tel {
+      margin-top: 23px;
     }
   }
 }

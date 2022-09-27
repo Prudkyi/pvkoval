@@ -1,5 +1,6 @@
 @import "../virable/main_var";
 
+// кнопка №1
 %btn-1 {
   border-radius: 7px;
   padding: 10px 25px 9px;
@@ -13,4 +14,9 @@
 %gold-color {
   color: #fcfbf1;
   text-shadow: 0 0 15px #D6C046;
+}
+
+// Тіні
+%box-shadow-1 {
+  box-shadow: 0 2px 5px #b0afaf;
 }

@@ -6,3 +6,37 @@
 
 @import "navigation";
 
+/* btn */
+
+.btn-modal1 {
+  background-color: $color-thue;
+  font-family: $font-gothampro;
+  text-transform: uppercase;
+  font-size: 17px;
+  padding: 8px 12px;
+  color: $color-for-blackFon;
+  border-radius: 7px;
+  box-shadow: 1px 1px 3px #2e2d2d;
+  cursor: pointer;
+  transition: all .2s;
+  @include _xxl {
+    font-size: 15px;
+  }
+  @include _xl {
+    font-size: 17px;
+    margin-top: 23px;
+  }
+  &:hover {
+    box-shadow: 1px 1px 3px #111111;
+    i {
+      color: $color-for-blackFon;
+    }
+  }
+  i {
+    margin-left: 7px;
+    color: $bg-color-main;
+  }
+}
+
+
+
