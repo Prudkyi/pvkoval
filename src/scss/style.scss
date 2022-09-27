@@ -5,6 +5,11 @@
 @import "fonts";
 
 @import "navigation";
+@import "home";
+
+body {
+  font-family: $font-arial;
+}
 
 /* btn */
 

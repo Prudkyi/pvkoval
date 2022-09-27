@@ -1,7 +1,3 @@
-window.addEventListener('scroll', e => {
-    document.body.style.cssText = `--scrollTop: ${this.scrollY}px`
-})
-
 // jQuery HTML Ready
 $(document).ready(function() {
 
@@ -30,8 +26,6 @@ $(document).ready(function() {
     let resHeightNav = heightNav + heightNavMob;
 
     navMob.animate({top: "-"+heightNavMob+"px"}, 300);
-
-
 
     nav__btn.on('click', function (){
         navMob.css('display', 'flex')
@@ -62,7 +56,14 @@ $(document).ready(function() {
         }
     });
 
+    /* Зображення фон */
 
+    function setImgForBlock (thisImgBlock, forBlock)
+    {
+        let src = $('#' + thisImgBlock).attr('src');
+        $('.'+forBlock).css('background-image', 'url(../'+src+')');
+    }
+    setImgForBlock('forImgBlock', 'topImg__img');
 
 });
 

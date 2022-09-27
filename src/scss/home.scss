@@ -1,0 +1,57 @@
+.topImg {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    img {
+      display: none;
+    }
+  }
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: $bg-color-main;
+    h1 {
+      font-size: 50px;
+      font-weight: bold;
+      font-family: $font-CormorantGaramond;
+      text-shadow: 0 0 10px #FFFBF5;
+    }
+    p {
+      font-family: $font-CormorantGaramond;
+      font-weight: bold;
+      font-size: 40px;
+      text-shadow: 0 0 10px #FFFBF5;
+    }
+    button {
+      border: none;
+      font-size: 20px;
+      color: $color-for-blackFon;
+      padding: 11px 20px 10px;
+    }
+    &-button {
+      @include _sm {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}
