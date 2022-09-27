@@ -34,12 +34,18 @@
       font-weight: bold;
       font-family: $font-CormorantGaramond;
       text-shadow: 0 0 10px #FFFBF5;
+      @include _sm {
+        font-size: 40px;
+      }
     }
     p {
       font-family: $font-CormorantGaramond;
       font-weight: bold;
       font-size: 40px;
       text-shadow: 0 0 10px #FFFBF5;
+      @include _sm {
+        font-size: 30px;
+      }
     }
     button {
       border: none;
@@ -51,6 +57,7 @@
       @include _sm {
         display: flex;
         justify-content: center;
+        font-size: 18px;
       }
     }
   }
