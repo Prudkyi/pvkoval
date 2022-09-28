@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import "virable/main_var";
 /* === CSS Table Of Content
 
 1. Content
@@ -45,6 +46,7 @@
 5. Cookie
 6. UI elements
 7. Media
+
 
 
 
@@ -367,23 +369,23 @@
 }
 
 .iitem:hover {
-  background-color: var(--main-color);
-  color: var(--primary-color);
+  background-color: $color-for-blackFon;
+  color: $color-main;
 }
 
 .iitem:hover .iitem-icon {
-  background: var(--primary-color);
-  color: var(--main-color);
-  fill: var(--main-color);
+  background: $bg-color-main;
+  color: $color-for-blackFon;
+  fill: $color-for-blackFon;
 }
 
 .iitem:hover .iitem-icon.iii-stroke {
   fill: transparent;
-  stroke: var(--main-color);
+  stroke: $bg-color-thue;
 }
 
 .iitem:hover .iitem-icon.iii-fill-stroke {
-  stroke: var(--main-color);
+  stroke: red
 }
 
 .iitem:hover .iitem-icon-bg {
@@ -464,12 +466,15 @@
   min-width: 6rem;
   border-radius: 50%;
   overflow: hidden;
-  background-color: var(--main-color);
-  background: linear-gradient(to right, var(--el-gradient1) 0%, var(--el-gradient2) 100%);
+  background: rgb(56,57,78);
+  background: linear-gradient(90deg, rgba(56,57,78,1) 0%, rgba(111,111,124,1) 100%);
   margin: 0 auto 1.25rem;
-  color: var(--primary-color);
-  fill: var(--primary-color);
+  color: $color-for-blackFon;
+  fill: $color-for-blackFon;
   stroke: transparent;
+  i {
+    font-size: 45px;
+  }
 }
 
 .iitem-icon > svg {
@@ -480,7 +485,7 @@
 
 .iitem-icon.iii-stroke {
   fill: transparent;
-  stroke: var(--primary-color);
+  stroke: $bg-color-thue;
 }
 
 .iitem-icon.iii-fill-stroke {
@@ -5143,10 +5148,10 @@ body.mob-main-mnu-open .mob-main-mnu {
 
 .item-style {
   position: relative;
-  background-color: var(--primary-color);
-  border-radius: var(--el-border-radius);
+  background-color: $color-for-blackFon;
+  border-radius: 5px;
   overflow: hidden;
-  color: var(--text-primary);
+  color: $color-main;
   height: 100%;
   transition: box-shadow 0.2s;
 }
