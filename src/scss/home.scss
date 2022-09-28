@@ -1,6 +1,6 @@
 .topImg {
   width: 100%;
-  height: 600px;
+  height: 100vh;
   position: relative;
   &__img {
     position: absolute;
@@ -60,5 +60,26 @@
         font-size: 18px;
       }
     }
+  }
+}
+
+/* Why US */
+.section-bgc {
+  .section-subheading {
+    font-weight: 600;
+    color: $bg-color-main;
+  }
+  h2 {
+    color: $bg-color-thue;
+  }
+  .ini-heading {
+    font-weight: 600;
+    font-size: 22px;
+  }
+  .ini-desc {
+    font-size: 18px;
+  }
+  .ini-count-large {
+    color: $bg-color-thue;
   }
 }

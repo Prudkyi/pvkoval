@@ -64,6 +64,8 @@ $(document).ready(function() {
         $('.'+forBlock).css('background-image', 'url(../'+src+')');
     }
     setImgForBlock('forImgBlock', 'topImg__img');
+    let heightForTopImg = innerHeight - 80;
+    $('.topImg').css('height', heightForTopImg + 'px')
 
     /* маска номеру */
 

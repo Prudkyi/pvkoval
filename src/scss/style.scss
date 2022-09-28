@@ -4,9 +4,12 @@
 @import "libre/main_libre";
 @import "fonts";
 @import "modal";
+@import "main";
 
 @import "navigation";
 @import "home";
+
+
 
 body {
   font-family: $font-gothampro;
