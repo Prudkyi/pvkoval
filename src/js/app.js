@@ -65,6 +65,121 @@ $(document).ready(function() {
     }
     setImgForBlock('forImgBlock', 'topImg__img');
 
+    /* маска номеру */
+
+    $('#callbackForm__tel').mask('+38 (999) 999-99-99');
+
+    $.fn.setCursorPosition = function(pos) {
+        if ($(this).get(0).setSelectionRange) {
+            $(this).get(0).setSelectionRange(pos, pos);
+        } else if ($(this).get(0).createTextRange) {
+            var range = $(this).get(0).createTextRange();
+            range.collapse(true);
+            range.moveEnd('character', pos);
+            range.moveStart('character', pos);
+            range.select();
+        }
+    };
+
+
+    $('input[type="tel"]').click(function(){
+        $(this).setCursorPosition(4);  // set position number
+    });
+
+    /* кнопка відправити */
+
+    // перевірка вводу всіх даних
+    function checkInputs (checkInput)
+    {
+        let elements = $(checkInput);
+        for (let i = 0; i < elements.length; i++)
+        {
+            if (elements[i].value !== '')
+            {
+                if (elements[i].getAttribute('id') === 'callbackForm__tel')
+                {
+                    let valTel = elements[i].value;
+                    let last = valTel.toString().slice(-1);
+                    if (last === '_') return false;
+                }
+            }
+            else return false;
+
+            if ( i === (elements.length - 1) ) return true;
+
+        }
+    }
+
+    $('.checkInput').keyup(function(){
+        let formBut = $('.callbackForm__button button');
+        if (checkInputs ('.checkInput'))
+        {
+            formBut.addClass('callbackForm__Ok');
+            formBut.removeClass('callbackForm__Nok');
+        }
+        else
+        {
+            formBut.addClass('callbackForm__Nok');
+            formBut.removeClass('callbackForm__Ok')
+        }
+    });
+
+    // перевірка коректності вводу всіх даних
+    const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+
+    function isEmailValid(value) {
+        return EMAIL_REGEXP.test(value);
+    }
+
+    function checkInputsData (checkInput)
+    {
+        let elements = $(checkInput);
+        let resCheck = true;
+        for (let i = 0; i < elements.length; i++)
+        {
+            let valID = elements[i].getAttribute('id');
+            if (elements[i].value !== '')
+            {
+                $('.callbackForm__input label[for=' + valID + '] span').css('display', 'none');
+                let valEl = elements[i].value;
+                // tell
+                if (valID === 'callbackForm__tel')
+                {
+
+                    for (let x = 0; x < valEl.length; x++)
+                    {
+                        if (valEl[x] === '_')
+                        {
+                            $('.callbackForm__input label[for=' + valID + '] span').css('display', 'inline-block');
+                            resCheck = false;
+                        }
+                        else $('.callbackForm__input label[for=' + valID + '] span').css('display', 'none');
+                    }
+                }
+                // email
+                if (valID === 'callbackForm__email')
+                {
+                    if (!isEmailValid(valEl))
+                    {
+                        $('.callbackForm__input label[for=' + valID + '] span').css('display', 'inline-block');
+                        resCheck = false;
+                    }
+                    else $('.callbackForm__input label[for=' + valID + '] span').css('display', 'none');
+                }
+            }
+            else {
+                $('.callbackForm__input label[for=' + valID + '] span').css('display', 'inline-block');
+                resCheck = false;
+            }
+        }
+        return resCheck;
+    }
+
+    $('.callbackForm__button').mouseover(function (){
+        if (checkInputsData('.checkInput')) $('.callbackForm__button-mask').css('display', 'none');
+        else $('.callbackForm__button-mask').css('display', 'block');
+    });
+
 });
 
 
