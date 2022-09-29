@@ -1,0 +1,70 @@
+@charset "UTF-8";
+@import "virable/main_var";
+@import "mixins/main_mixins";
+@import "libre/grid";
+@import "libre/main_libre";
+@import "fonts";
+
+.img-style {
+  height: 400px;
+  width: 100%;
+  position: relative;
+  margin: 0 auto 40px;
+  border: none;
+  box-shadow: $box-shadow2;
+  img {
+    display: none;
+  }
+  .services_img_this {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+  }
+}
+.section .content {
+  font-style: $font-georgia;
+  font-size: 18px;
+  line-height: 30px;
+  width: 81%;
+  margin: 0 auto;
+  h2 {
+
+  }
+  &> p {
+    padding: 15px 0;
+  }
+  b {
+
+  }
+  blockquote {
+    background-color: #F0F4F8;
+    padding: 20px 20px 30px;
+    border-radius: 5px;
+    i {
+      position: relative;
+      top: -15px;
+      left: -15px;
+      color: $bg-color-thue;
+      padding: 0;
+      margin: 0;
+    }
+    p {
+      padding: 0;
+    }
+  }
+  li {
+    list-style: none;
+    i {
+      color: $bg-color-thue;
+      position: relative;
+      top: 5px;
+      margin-right: 5px;
+    }
+  }
+}

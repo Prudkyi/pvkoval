@@ -25,7 +25,7 @@
   font-family: $font-gothampro;
   position: relative;
   z-index: 8888;
-  @extend %box-shadow-1;
+  box-shadow: $box-shadow2;
   @include _xl {
     box-shadow: none;
   }
@@ -173,7 +173,7 @@
   background-color: $bg-color-main;
   z-index: 1000;
   border-top: 1px solid $bg-color-thue;
-  @extend %box-shadow-1;
+  box-shadow: $box-shadow2;
   &__menu {
     position: relative;
     text-align: right;

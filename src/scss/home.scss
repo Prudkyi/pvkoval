@@ -1,3 +1,10 @@
+@charset "UTF-8";
+@import "virable/main_var";
+@import "mixins/main_mixins";
+@import "libre/grid";
+@import "libre/main_libre";
+@import "fonts";
+
 .topImg {
   width: 100%;
   height: 100vh;
@@ -63,7 +70,7 @@
   }
 }
 
-/* Why US */
+/* Why US   */
 .section-bgc {
   .section-subheading {
     font-weight: 600;
@@ -83,6 +90,30 @@
     color: $bg-color-thue;
   }
 }
-.item a{
-  border: 1px solid red;
+
+/* Services */
+
+.services .container {
+  max-width: 80%;
+  h2 {
+    color: $bg-color-thue;
+  }
+  img {
+    transition: 1s;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+.service-single .container {
+  max-width: 70%;
+  h2 {
+    color: $bg-color-thue;
+  }
+  img {
+    transition: 1s;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
 }

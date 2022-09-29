@@ -63,9 +63,12 @@ $(document).ready(function() {
         let src = $('#' + thisImgBlock).attr('src');
         $('.'+forBlock).css('background-image', 'url(../'+src+')');
     }
+    // головна в топі
     setImgForBlock('forImgBlock', 'topImg__img');
     let heightForTopImg = innerHeight - 80;
-    $('.topImg').css('height', heightForTopImg + 'px')
+    $('.topImg').css('height', heightForTopImg + 'px');
+    // послуги в топі
+    setImgForBlock('servicesImg', 'services_img_this');
 
     /* маска номеру */
 
@@ -181,6 +184,15 @@ $(document).ready(function() {
         if (checkInputsData('.checkInput')) $('.callbackForm__button-mask').css('display', 'none');
         else $('.callbackForm__button-mask').css('display', 'block');
     });
+
+    /* Стилі елементів в контенті */
+
+    // списки
+    $(".section .content ul li").prepend("<i class=\"material-icons md-24\">check</i>")
+    // закладки (тег цитати)
+    $(".section .content blockquote").prepend("<i class=\"material-icons md-32\">bookmark</i>")
+
+
 
 });
 
