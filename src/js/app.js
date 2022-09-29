@@ -188,11 +188,24 @@ $(document).ready(function() {
     /* Стилі елементів в контенті */
 
     // списки
-    $(".section .content ul li").prepend("<i class=\"material-icons md-24\">check</i>")
+    $(".section .content ul li").prepend("<i class=\"material-icons md-24\">check</i>");
     // закладки (тег цитати)
-    $(".section .content blockquote").prepend("<i class=\"material-icons md-32\">bookmark</i>")
+    $(".section .content blockquote").prepend("<i class=\"material-icons md-32\">bookmark</i>");
 
+    /* Випадающе меню */
 
+    let checkOpenAddMenu = false;
+    $('.addMenu').on('click', function (){
+        if (!checkOpenAddMenu)
+        {
+            $('.addMenu__wrap').show(300);
+            checkOpenAddMenu = true;
+        }
+        else {
+            $('.addMenu__wrap').hide(300);
+            checkOpenAddMenu = false;
+        }
+    });
 
 });
 

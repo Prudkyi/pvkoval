@@ -9,11 +9,22 @@
 @import "navigation";
 @import "home";
 @import "single-page";
+@import "footer";
 
 body {
   font-family: $font-gothampro;
 }
-
+.section h2 {
+  color: $bg-color-thue;
+}
+.footer {
+  flex: 0 0 auto;
+}
+header ul, header ol, footer ul, footer ol, aside ul, aside ol, nav ul, nav ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 /* btn */
 
 .btn-modal1 {
@@ -21,7 +32,7 @@ body {
   font-family: $font-gothampro;
   text-transform: uppercase;
   font-size: 17px;
-  padding: 8px 12px;
+  padding: 10px 12px;
   color: $color-for-blackFon;
   border-radius: 7px;
   box-shadow: 1px 1px 3px #2e2d2d;

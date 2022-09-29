@@ -67,13 +67,62 @@
     }
     li {
       margin: 0 15px;
+      position: relative;
+      z-index: 2000;
     }
-    a {
+    .addMenu {
+      cursor: pointer;
+      user-select: none;
+      &__wrap {
+        position: absolute;
+        top: 40px;
+        left:  -27px;
+        display: none;
+        &__items {
+          border-radius: 5px;
+          overflow: hidden;
+          box-shadow: $box-shadow2;
+          display: flex;
+          align-items: flex-start;
+          a {
+            color: $color-main;
+            padding: 12px 30px;
+            left: 0;
+            &::after {
+              display: none;
+            }
+            &:hover {
+              color: $color-for-blackFon;
+            }
+          }
+          li {
+            padding: 12px 0;
+            margin: 0;
+            list-style: none;
+            text-align: left;
+            border-top: 1px solid #e5e3e3;
+            background-color: $color-for-blackFon;
+            &:hover {
+              background-color: $bg-color-thue;
+            }
+            &:first-child {
+              border: none;
+            }
+          }
+          ul {
+            margin: 0;
+            padding: 0;
+          }
+        }
+      }
+    }
+    a, .addMenu {
       color: $color-for-blackFon;
       text-transform: uppercase;
       font-size: 17px;
       text-decoration: none;
       position: relative;
+      z-index: 2000;
       @include _xxl {
         font-size: 15px;
       }
@@ -186,12 +235,13 @@
         color: $bg-color-thue;
       }
     }
-    a {
+    a, .addMenu {
       color: $color-for-blackFon;
       text-transform: uppercase;
       font-size: 17px;
       text-decoration: none;
       position: relative;
+      cursor: pointer;
       &::after {
         transition: all .3s;
         content: '';
@@ -210,6 +260,25 @@
     }
     &--tel {
       margin-top: 23px;
+    }
+    .addMenu::after {
+      display: none;
+    }
+  }
+  .addMenu {
+    &__wrap {
+      display: none;
+      background-color: $bg-color-thue;
+      padding: 0 15px 5px 0;
+      border-radius: 5px 0 5px 5px;
+      overflow: hidden;
+      box-shadow: $box-shadow2;
+      &__items {
+        li {
+          list-style: none;
+          margin-top: 20px;
+        }
+      }
     }
   }
 }

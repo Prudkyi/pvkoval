@@ -5,6 +5,8 @@
 @import "libre/main_libre";
 @import "fonts";
 
+
+
 .topImg {
   width: 100%;
   height: 100vh;
@@ -76,9 +78,6 @@
     font-weight: 600;
     color: $bg-color-main;
   }
-  h2 {
-    color: $bg-color-thue;
-  }
   .ini-heading {
     font-weight: 600;
     font-size: 22px;
@@ -116,4 +115,62 @@
       transform: scale(1.2);
     }
   }
+}
+
+/* 2.1 Accordion */
+.accordion {
+  color: var(--text-secondary);
+  margin-bottom: -1.25rem;
+}
+
+.accordion-col {
+  margin-bottom: 1.25rem;
+}
+
+.accordion-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.accordion-item {
+  display: block;
+  border-radius: var(--el-border-radius);
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.accordion-item.active .accordion-trigger::before {
+  transform: rotate(0);
+}
+
+.accordion-trigger {
+  position: relative;
+  cursor: pointer;
+  padding: 1.25rem 3.125rem 1.25rem 1.25rem;
+  color: var(--text-primary);
+  line-height: 1.2;
+  font-size: 19px;
+}
+
+.accordion-trigger::after, .accordion-trigger::before {
+  content: "";
+  position: absolute;
+  right: 1.25rem;
+  top: 50%;
+  width: 0.875rem;
+  height: 2px;
+  background-color: var(--main-color);
+  margin-top: -1px;
+  transition: all 0.3s;
+}
+
+.accordion-trigger::before {
+  transform: rotate(90deg);
+}
+
+.accordion-content {
+  display: none;
+  padding: 1.25rem;
+  border-top: 1px solid var(--border-color);
 }
