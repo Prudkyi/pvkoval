@@ -180,12 +180,9 @@ $(document).ready(function() {
         return resCheck;
     }
 
-    $('.callbackForm__button').mouseover(function (){
-        if (checkInputsData('.checkInput')) $('.callbackForm__button-mask').css('display', 'none');
-        else $('.callbackForm__button-mask').css('display', 'block');
+    $('.callbackForm__button button').click(function (){
+        if (checkInputsData('.checkInput')) document.getElementById("maskCallbackBut").click()
     });
-
-    document.getElementById("testBtn").click();
 
     /* Стилі елементів в контенті */
 
