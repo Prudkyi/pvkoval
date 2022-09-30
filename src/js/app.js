@@ -185,6 +185,8 @@ $(document).ready(function() {
         else $('.callbackForm__button-mask').css('display', 'block');
     });
 
+    document.getElementById("testBtn").click();
+
     /* Стилі елементів в контенті */
 
     // списки

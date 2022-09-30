@@ -179,7 +179,7 @@
       font-size: 17px;
       margin-bottom: 20px;
       border-radius: 4px;
-      border: 1px solid #babab9;
+      border: 1px solid $form-border-color;
       outline: none !important;
       &:focus {
         border: 1px solid $bg-color-thue;
