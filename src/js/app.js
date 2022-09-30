@@ -180,8 +180,58 @@ $(document).ready(function() {
         return resCheck;
     }
 
+    function checkInputsDataContact (checkInput)
+    {
+        let elements = $(checkInput);
+        let resCheck = true;
+        for (let i = 0; i < elements.length; i++)
+        {
+            let valID = elements[i].getAttribute('id');
+            if (elements[i].value !== '')
+            {
+                $('#' + valID + ' ~ span').css('display', 'none');
+                let valEl = elements[i].value;
+                // tell
+                if (valID === 'callbackForm__tel')
+                {
+
+                    for (let x = 0; x < valEl.length; x++)
+                    {
+                        if (valEl[x] === '_')
+                        {
+                            $('#' + valID + ' ~ span').css('display', 'inline-block');
+                            resCheck = false;
+                        }
+                        else $('#' + valID + ' ~ span').css('display', 'none');
+                    }
+                }
+                // email
+                if (valID === 'callbackForm__email')
+                {
+                    if (!isEmailValid(valEl))
+                    {
+                        $('#' + valID + ' ~ span').css('display', 'inline-block');
+                        resCheck = false;
+                    }
+                    else $('#' + valID + ' ~ span').css('display', 'none');
+                }
+            }
+            else {
+                $('#' + valID + ' ~ span').css('display', 'inline-block');
+                resCheck = false;
+            }
+        }
+        return resCheck;
+    }
+
     $('.callbackForm__button button').click(function (){
-        if (checkInputsData('.checkInput')) document.getElementById("maskCallbackBut").click()
+        if (checkInputsData('.checkInput')) document.getElementById("maskCallbackBut").click();
+        $('.checkInput').val('');
+    });
+
+    $('.form-btn button').click(function (){
+        if (checkInputsDataContact('.checkInput2')) document.getElementById("maskCallbackBut").click();
+        $('.checkInput2').val('');
     });
 
     /* Стилі елементів в контенті */

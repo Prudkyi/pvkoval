@@ -36,7 +36,7 @@ header ul, header ol, footer ul, footer ol, aside ul, aside ol, nav ul, nav ol {
   padding: 10px 12px;
   color: $color-for-blackFon;
   border-radius: 7px;
-  box-shadow: 1px 1px 3px #2e2d2d;
+  box-shadow: $box-shadow1;
   cursor: pointer;
   transition: all .2s;
   @include _xxl {
@@ -47,7 +47,7 @@ header ul, header ol, footer ul, footer ol, aside ul, aside ol, nav ul, nav ol {
     margin-top: 23px;
   }
   &:hover {
-    box-shadow: 1px 1px 3px #111111;
+    box-shadow: $box-shadow2;
     i {
       color: $color-for-blackFon;
     }
