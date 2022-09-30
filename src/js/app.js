@@ -58,10 +58,10 @@ $(document).ready(function() {
 
     /* Зображення фон */
 
-    function setImgForBlock (thisImgBlock, forBlock)
+    function setImgForBlock (thisImgBlockId, forBlockClass)
     {
-        let src = $('#' + thisImgBlock).attr('src');
-        $('.'+forBlock).css('background-image', 'url(../'+src+')');
+        let src = $('#' + thisImgBlockId).attr('src');
+        $('.'+forBlockClass).css('background-image', 'url(../'+src+')');
     }
     // головна в топі
     setImgForBlock('forImgBlock', 'topImg__img');
@@ -69,6 +69,7 @@ $(document).ready(function() {
     $('.topImg').css('height', heightForTopImg + 'px');
     // послуги в топі
     setImgForBlock('servicesImg', 'services_img_this');
+    setImgForBlock('about__img', 'about__img');
 
     /* маска номеру */
 
@@ -234,13 +235,12 @@ $(document).ready(function() {
         $('.checkInput2').val('');
     });
 
-    /* Стилі елементів в контенті */
+    /**************!!!!!!!************ Стилі елементів в контенті */
 
     // списки
     $(".section .content ul li").prepend("<i class=\"material-icons md-24\">check</i>");
     // закладки (тег цитати)
     $(".section .content blockquote").prepend("<i class=\"material-icons md-32\">bookmark</i>");
-
     /* Випадающе меню */
 
     let checkOpenAddMenu = false;
@@ -255,6 +255,21 @@ $(document).ready(function() {
             checkOpenAddMenu = false;
         }
     });
+
+    /* Мінімальна висота головного контента     */
+    let heightFooter = $('footer').height();
+    let heightHeader = $('header').height();
+    let heightWindow = $(document).height();
+
+    let sumMainHeightEl = heightFooter + heightHeader;
+    let sumMinHeightContent = heightWindow - sumMainHeightEl;
+
+    $('#oneSection').css('min-height', sumMinHeightContent + 'px');
+
+
+
+
+
 
 });
 
