@@ -38,6 +38,7 @@
   height: 100%;
   z-index: 200;
   cursor: default;
+  display: none;
   @include _sm {
     width: 100%;
   }
