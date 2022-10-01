@@ -56,21 +56,6 @@ $(document).ready(function() {
         }
     });
 
-    /* Зображення фон */
-/*
-    function setImgForBlock (thisImgBlockId, forBlockClass)
-    {
-        let src = $('#' + thisImgBlockId).attr('src');
-        $('.'+forBlockClass).css('background-image', 'url(../'+src+')');
-    }
-    // головна в топі
-    setImgForBlock('forImgBlock', 'topImg__img');
-    let heightForTopImg = innerHeight - 80;
-    $('.topImg').css('height', heightForTopImg + 'px');
-    // послуги в топі
-    setImgForBlock('servicesImg', 'services_img_this');
-    setImgForBlock('about__img', 'about__img');*/
-
     /* маска номеру */
 
     $('#callbackForm__tel').mask('+38 (999) 999-99-99');
