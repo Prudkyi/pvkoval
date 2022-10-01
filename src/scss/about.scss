@@ -6,6 +6,10 @@
 
 
 .about {
+  .content {
+    width: 100%;
+    padding-left: 30px;
+  }
   &__img {
     overflow: hidden;
     border-radius: 8px;
@@ -54,6 +58,13 @@
         width: 100%;
       }
     }
+  }
+  .content_img_this {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    outline: 1px solid red;
+    background-image: url('../img/subheader-corporate.png')
   }
 }
 .aboutQuestion {

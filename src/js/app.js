@@ -57,7 +57,7 @@ $(document).ready(function() {
     });
 
     /* Зображення фон */
-
+/*
     function setImgForBlock (thisImgBlockId, forBlockClass)
     {
         let src = $('#' + thisImgBlockId).attr('src');
@@ -69,7 +69,7 @@ $(document).ready(function() {
     $('.topImg').css('height', heightForTopImg + 'px');
     // послуги в топі
     setImgForBlock('servicesImg', 'services_img_this');
-    setImgForBlock('about__img', 'about__img');
+    setImgForBlock('about__img', 'about__img');*/
 
     /* маска номеру */
 
@@ -237,10 +237,13 @@ $(document).ready(function() {
 
     /**************!!!!!!!************ Стилі елементів в контенті */
 
-    // списки
+    // списки в контенті
     $(".section .content ul li").prepend("<i class=\"material-icons md-24\">check</i>");
     // закладки (тег цитати)
     $(".section .content blockquote").prepend("<i class=\"material-icons md-32\">bookmark</i>");
+    // списки в інформаційних блоках для посилань
+    $(".prdkInfoBlock ul li").prepend("<i class=\"material-icons md-24\">check</i>");
+
     /* Випадающе меню */
 
     let checkOpenAddMenu = false;
