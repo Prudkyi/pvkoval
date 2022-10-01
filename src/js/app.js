@@ -261,7 +261,7 @@ $(document).ready(function() {
         let found = name.lastIndexOf('.') + 1;
         return (found > 0 ? name.substr(found) : "");
     }
-
+    // модальне вікно
     $('.modalWindows__content__files a').each(function(i,elem) {
         let elClass = $(this).attr('href');
         let resultEx = getFileExtension(elClass);
@@ -286,6 +286,7 @@ $(document).ready(function() {
         }
     });
 
+    // лист файлів в "документи"
     $('.documents__item a').each(function(i,elem) {
         let elClass = $(this).attr('href');
         let resultEx = getFileExtension(elClass);
@@ -299,11 +300,11 @@ $(document).ready(function() {
         }
         else if (resultEx == 'doc' || resultEx == 'docx')
         {
-            $(this).prev().addClass('prdk_icon_file');
+            $(this).prev().addClass('prdk_icon_doc');
         }
         else if (resultEx == 'xlsx')
         {
-            $(this).prev().addClass('prdk_icon_file');
+            $(this).prev().addClass('prdk_icon_exel');
         }
         else {
             $(this).prev().addClass('prdk_icon_file');

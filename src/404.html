@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  @@include('html/head.html',{
+  "title":"PV Koval"
+  })
+</head>
+<body>
+
+@@include('html/header.html',{})
+
+<style>
+  .page404 .btn-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .page404 .btn-group a {
+    display: flex;
+    margin: 20px 30px 0;
+    text-decoration: none;
+    padding: 12px 20px 11px;
+  }
+  .page404 .btn-group a:hover {
+    color: #ffffff;
+  }
+  .section-subheading {
+    font-size: 22px;
+  }
+  .section-heading h1 {
+    font-weight: bold;
+    font-size: 60px;
+  }
+</style>
+<section id="oneSection">
+
+  <main class="main">
+
+    <div class="main-inner">
+
+      <!-- Begin bread crumbs -->
+      <nav class="bread-crumbs">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <ul class="bread-crumbs-list">
+                <li>
+                  <a href="index.html">Головна</a>
+                  <i class="material-icons md-18">chevron_right</i>
+                </li>
+                <li><a href="#!">404</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav><!-- End bread crumbs -->
+
+      <div class="section page404">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="section-heading heading-center">
+                <div class="section-subheading">Вибачте, але сторінка не знайдена</div>
+                <h1>404</h1>
+                <p class="section-desc">Можливо, ви неправильно ввели адресу або сторінку перемістили</p>
+              </div>
+              <div class="btn-group">
+                <a href="index.html" class="btn-modal1">Перейти на домашню сторінку<i class="material-icons md-26">home</i></a>
+                <a href="contact.html" class="btn-modal1">Зв'яжіться з нами<i class="material-icons md-26">call</i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main><!-- End main -->
+
+</section>
+
+<footer>
+  @@include('html/footer.html',{})
+  @@include('html/modal.html',{})
+</footer>
+@@include('html/scripts.html',{})
+
+</body>
+</html>
