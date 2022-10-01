@@ -227,7 +227,7 @@ $(document).ready(function() {
     // закладки (тег цитати)
     $(".section .content blockquote").prepend("<i class=\"material-icons md-32\">bookmark</i>");
     // списки в інформаційних блоках для посилань
-    $(".prdkInfoBlock ul li").prepend("<i class=\"material-icons md-24\">check</i>");
+    $(".prdkInfoBlock ul li").prepend("<i class=\"material-icons md-24\">link</i>");
 
     /* Випадающе меню */
 
