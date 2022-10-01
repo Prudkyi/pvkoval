@@ -255,9 +255,60 @@ $(document).ready(function() {
     $('#oneSection').css('min-height', sumMinHeightContent + 'px');
 
 
+    /* Читати типи файлів і вставити потрібний тип розширення */
+    function getFileExtension(name)
+    {
+        let found = name.lastIndexOf('.') + 1;
+        return (found > 0 ? name.substr(found) : "");
+    }
 
+    $('.modalWindows__content__files a').each(function(i,elem) {
+        let elClass = $(this).attr('href');
+        let resultEx = getFileExtension(elClass);
+        if (resultEx == "png" || resultEx == "jpg" || resultEx == "jpeg" || resultEx == "gif")
+        {
+            $(this).addClass('prdk_icon_img');
+        }
+        else if (resultEx == 'pdf')
+        {
+            $(this).addClass('prdk_icon_pdf');
+        }
+        else if (resultEx == 'doc' || resultEx == 'docx')
+        {
+            $(this).addClass('prdk_icon_doc');
+        }
+        else if (resultEx == 'xlsx')
+        {
+            $(this).addClass('prdk_icon_exel');
+        }
+        else {
+            $(this).addClass('prdk_icon_file');
+        }
+    });
 
-
+    $('.documents__item a').each(function(i,elem) {
+        let elClass = $(this).attr('href');
+        let resultEx = getFileExtension(elClass);
+        if (resultEx == "png" || resultEx == "jpg" || resultEx == "jpeg" || resultEx == "gif")
+        {
+            $(this).prev().addClass('prdk_icon_img');
+        }
+        else if (resultEx == 'pdf')
+        {
+            $(this).prev().addClass('prdk_icon_pdf');
+        }
+        else if (resultEx == 'doc' || resultEx == 'docx')
+        {
+            $(this).prev().addClass('prdk_icon_file');
+        }
+        else if (resultEx == 'xlsx')
+        {
+            $(this).prev().addClass('prdk_icon_file');
+        }
+        else {
+            $(this).prev().addClass('prdk_icon_file');
+        }
+    });
 
 });
 

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  @@include('html/head.html',{
+  "title":"PV Koval"
+  })
+</head>
+<body>
+
+@@include('html/header.html',{})
+
+
+<section id="oneSection">
+
+  <main class="main">
+
+    <div class="main-inner">
+
+      <!-- Begin bread crumbs -->
+      <nav class="bread-crumbs">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <ul class="bread-crumbs-list">
+                <li>
+                  <a href="index.html">Головна</a>
+                  <i class="material-icons md-18">chevron_right</i>
+                </li>
+                <li><a href="#!">Документи</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav><!-- End bread crumbs -->
+
+      <article class="section documents">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="section-heading heading-center">
+                <h1>Документи</h1>
+              </div>
+              <div class="documents__content">
+                <div class="img-style" style="background-image: url(img/documents.jpg)">
+                </div>
+
+                <div class="documents__title">
+                  <h2>Завантажте необхідні Вам документи</h2>
+                </div>
+                <div class="documents__wrap">
+                  <div class="documents__item">
+                    <div class="documents__item-icon"></div>
+                    <a href="file.pdf" download="">Посилання на завантаження документу</a>
+                  </div>
+                  <div class="documents__item">
+                    <div class="documents__item-icon"></div>
+                    <a href="file.jpg" download="">Посилання на завантаження документу</a>
+                  </div>
+                  <div class="documents__item">
+                    <div class="documents__item-icon"></div>
+                    <a href="file.txt" download="">Посилання на завантаження документу</a>
+                  </div>
+                  <div class="documents__item">
+                    <div class="documents__item-icon"></div>
+                    <a href="file.doc" download="">Посилання на завантаження документу</a>
+                  </div>
+                  <div class="documents__item">
+                    <div class="documents__item-icon"></div>
+                    <a href="file.xlsx" download="">Посилання на завантаження документу</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+  </main><!-- End main -->
+
+</section>
+
+<footer>
+  @@include('html/footer.html',{})
+  @@include('html/modal.html',{})
+</footer>
+@@include('html/scripts.html',{})
+
+</body>
+</html>

@@ -58,18 +58,21 @@
   background-size: 100% 100%;
   opacity: 1;
 }
+/* КЛАСИ ІКОНОК ЗОБРАЖЕНЬ */
 
-.modalWindows__content__files .prdk_icon_img {
+.prdk_icon_img {
   background-image: url("../img/icon/jpg_icon.png");
 }
 
-.modalWindows__content__files .prdk_icon_pdf {
+.prdk_icon_pdf {
   background-image: url("../img/icon/png_icon.png");
 }
 
-.modalWindows__content__files .prdk_icon_file {
+.prdk_icon_file {
   background-image: url("../img/icon/file_icon.png");
 }
+
+/* END  */
 
 .modalWindows__content__files_title p {
   text-align: center;
