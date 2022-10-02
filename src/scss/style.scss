@@ -23,6 +23,9 @@ body {
 .footer {
   flex: 0 0 auto;
 }
+#oneSection {
+  overflow: hidden;
+}
 header ul, header ol, footer ul, footer ol, aside ul, aside ol, nav ul, nav ol {
   list-style: none;
   margin: 0;

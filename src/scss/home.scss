@@ -38,6 +38,10 @@
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.1);
     color: $bg-color-main;
+    .col-12 {
+      position: relative;
+      top: -50px;
+    }
     h1 {
       font-size: 50px;
       font-weight: bold;
@@ -73,6 +77,7 @@
 }
 
 /* Why US   */
+
 .section-bgc {
   .section-subheading {
     font-weight: 600;

@@ -2,9 +2,9 @@
 $(document).ready(function() {
 
     /* динміка меню */
-    var lastScrollTop = 0;
+    let lastScrollTop = 0;
     $(window).scroll(function(event){
-        var st = $(this).scrollTop();
+        let st = $(this).scrollTop();
         if (st > lastScrollTop){
             $('.header').removeClass('fixed');
         } else {
@@ -312,6 +312,92 @@ $(document).ready(function() {
     });
 
 });
+
+// GSAP Анімація
+
+/********** HOME ********************/
+let timeLine = gsap.timeline();
+let timeLine2 = gsap.timeline();
+let timeLine3 = gsap.timeline();
+let timeLine4 = gsap.timeline();
+let timeLine5 = gsap.timeline();
+let timeLine6 = gsap.timeline();
+let timeLine7 = gsap.timeline();
+
+// top img
+timeLine.from('.topImg__title', {opacity: 0, y: 50, duration: 0.7})
+        .from('.topImg__desc', {opacity: 0, y: 50, duration: 0.7}, "-=0.7")
+
+
+// why US
+timeLine2.from( ".whu-us-el" , { opacity: 0, y: 200, duration: 0.7 });
+
+ScrollTrigger.create({
+    animation: timeLine2,
+    trigger: '.whu-us',
+    start: 'top center',
+    end: 'bottom',
+});
+// services
+timeLine3.from( ".services-el" , { opacity: 0, y: 200, duration: 0.5 });
+
+ScrollTrigger.create({
+    animation: timeLine3,
+    trigger: '.services-animation',
+    start: 'top center',
+    end: 'bottom',
+});
+
+// text
+timeLine4.from( ".textBlock-el" , { opacity: 0, y: 200, duration: 0.5 });
+
+ScrollTrigger.create({
+    animation: timeLine4,
+    trigger: '.textBlock',
+    start: 'top center',
+    end: 'bottom',
+});
+
+// question
+timeLine5.from( ".question-el" , { opacity: 0, x: 700, duration: 1 });
+
+ScrollTrigger.create({
+    animation: timeLine5,
+    trigger: '.question',
+    start: 'top center',
+    end: 'bottom',
+});
+
+
+// scrol left bl 1
+timeLine6.from( ".scrollLeft-el-1" , { opacity: 0, x: -700, duration: 1 });
+ScrollTrigger.create({
+    animation: timeLine6,
+    trigger: '.scrollLeft-1',
+    start: 'top center',
+    end: 'bottom',
+});
+// scroll right bl 1
+timeLine7.from( ".scrollRight-el-1" , { opacity: 0, x: 700, duration: 1 });
+ScrollTrigger.create({
+    animation: timeLine7,
+    trigger: '.scrollRight-1',
+    start: 'top center',
+    end: 'bottom',
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

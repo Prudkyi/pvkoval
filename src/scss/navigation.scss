@@ -4,21 +4,29 @@
 @import "libre/main_libre";
 @import "fonts";
 
-.header {
-  height: $size-menu;
-  top: -$size-menu;
-  transition: top .3s;
-  text-align: center;
-}
-.header.fixed {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 8888;
-}
-.header.fixed ~ #oneSection {
-  margin-top: $size-menu;
-}
+  .header {
+    height: $size-menu;
+    top: -$size-menu;
+    transition: top .4s;
+    text-align: center;
+    @include _sm {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 8888;
+    }
+  }
+  .header.fixed {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 8888;
+    transition: top .4s;
+  }
+  .header.fixed ~ #oneSection {
+    margin-top: $size-menu;
+  }
+
 
 .nav {
   background-color: $bg-color-main;
