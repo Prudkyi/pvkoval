@@ -28,7 +28,7 @@ export const scss = () => {
                 groupCssMediaQueries()
             )
         )
-
+/*
         .pipe(
             app.plugins.if(
                 app.isBuild,
@@ -39,7 +39,7 @@ export const scss = () => {
                     }
                 )
             )
-        )
+        ) */
 
         .pipe(
             app.plugins.if(
