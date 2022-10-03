@@ -81,11 +81,16 @@
     .addMenu {
       cursor: pointer;
       user-select: none;
+      transition: all 0.3s;
+      &:hover .addMenu__wrap {
+        display: block;
+      }
       &__wrap {
         position: absolute;
-        top: 70px;
-        left:  23.5%;
+        top: 0;
+        left:  0;
         display: none;
+        padding-top: 60px;
         &__items {
           border-radius: 5px;
           overflow: hidden;
@@ -110,6 +115,7 @@
             text-align: left;
             border-top: 1px solid #e5e3e3;
             background-color: $color-for-blackFon;
+            width: 270px;
             &:hover {
               background-color: $bg-color-thue;
             }

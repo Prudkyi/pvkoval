@@ -74,29 +74,18 @@
       }
     }
   }
-}
-
-/* arrow Block */
-.blockArrow {
-  display: flex;
-  flex-direction: column;
-  li {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    padding-bottom: 10px;
-    i {
-      margin-right: 10px;
-    }
+  .displayPC {
+    display: block;
   }
-  a {
-    text-decoration: none;
-    font-size: 18px;
-    &:hover {
-      color: $bg-color-thue;
-    }
-    &::after {
+  .displayMob {
+    display: none;
+  }
+  @include _sm {
+    .displayPC {
       display: none;
+    }
+    .displayMob {
+      display: block;
     }
   }
 }

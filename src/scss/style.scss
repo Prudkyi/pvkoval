@@ -33,6 +33,14 @@ header ul, header ol, footer ul, footer ol, aside ul, aside ol, nav ul, nav ol {
   padding: 0;
 }
 /* btn */
+.callback_wrap {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 70px;
+  button {
+    border: none
+  }
+}
 
 .btn-modal1 {
   background-color: $color-thue;

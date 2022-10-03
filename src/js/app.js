@@ -266,11 +266,12 @@ $(document).ready(function() {
     $(".section .content blockquote").prepend("<i class=\"material-icons md-32\">bookmark</i>");
     // списки в інформаційних блоках для посилань
     $(".prdkInfoBlock ul li").prepend("<i class=\"material-icons md-24\">link</i>");
+    $(".addIcon-Ul-Li ul li").prepend("<i class=\"material-icons md-24\">link</i>");
 
     /* Випадающе меню */
 
     let checkOpenAddMenu = false;
-    $('.addMenu').on('click', function (){
+    $('.navmob .addMenu span').on('click', function (){
         if (!checkOpenAddMenu)
         {
             $('.addMenu__wrap').show(300);
@@ -281,6 +282,16 @@ $(document).ready(function() {
             checkOpenAddMenu = false;
         }
     });
+
+    $('.navmob .addMenu .noLink').on('click', function (){
+        $('.addMenu__wrap').hide(300);
+        checkOpenAddMenu = false;
+    });
+    $('.nav .nav__btn').on('click', function (){
+        $('.addMenu__wrap').hide(300);
+        checkOpenAddMenu = false;
+    });
+
 
     /* Мінімальна висота головного контента     */
     let heightFooter = $('footer').height();
@@ -370,7 +381,7 @@ $(document).ready(function() {
 
     /**** Відміна кліка ****/
 
-    $('.dontArrow').on('click', function (e) {
+    $('.noLink').on('click', function (e) {
         e.preventDefault();
     });
 
@@ -388,6 +399,7 @@ let timeLine4 = gsap.timeline();
 let timeLine5 = gsap.timeline();
 let timeLine6 = gsap.timeline();
 let timeLine7 = gsap.timeline();
+let timeLine8 = gsap.timeline();
 
 // top img
 timeLine.from('.topImg__title', {opacity: 0, y: 50, duration: 0.7})
@@ -419,6 +431,16 @@ timeLine4.from( ".textBlock-el" , { opacity: 0, y: 200, duration: 0.5 });
 ScrollTrigger.create({
     animation: timeLine4,
     trigger: '.textBlock',
+    start: 'top center',
+    end: 'bottom',
+});
+
+// text 2
+timeLine8.from( ".textBlock2-el" , { opacity: 0, y: 200, duration: 0.5 });
+
+ScrollTrigger.create({
+    animation: timeLine8,
+    trigger: '.textBlock2',
     start: 'top center',
     end: 'bottom',
 });
