@@ -17,12 +17,13 @@
 body {
   font-family: $font-gothampro;
 }
-.section h2 {
+.section h2, .section h1 {
   color: $bg-color-thue;
 }
 .footer {
   flex: 0 0 auto;
 }
+
 #oneSection {
   overflow: hidden;
 }

@@ -349,6 +349,33 @@ $(document).ready(function() {
         }
     });
 
+    /************ Content TEXT accordion  *********/
+    $('.blockAccordion__text').slideUp();
+    $('.blockAccordion__button-open').click(function (){
+            let thisIdBtn = $(this).attr('id');
+            let statusBlock = $(this).attr('data-count');
+            if (statusBlock === 'not-active')
+            {
+                $('.' + thisIdBtn).slideDown();
+                $(this).attr('data-count', 'active');
+                $(this).text('Менше');
+            }
+            else {
+                $('.' + thisIdBtn).slideUp();
+                $(this).attr('data-count', 'not-active');
+                $(this).text('Читати повністю');
+            }
+
+    });
+
+    /**** Відміна кліка ****/
+
+    $('.dontArrow').on('click', function (e) {
+        e.preventDefault();
+    });
+
+
+
 });
 
 // GSAP Анімація
