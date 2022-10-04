@@ -17,8 +17,11 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    img {
-      display: none;
+    @include _lg {
+      width: 90%;
+      height: 45vh;
+      margin: 0 auto 30px;
+
     }
   }
   &__text {

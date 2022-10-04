@@ -129,6 +129,12 @@
   margin: 0 auto;
   &> div {
     padding: 1%;
+    @include _lg {
+      margin-bottom: 30px;
+      &:first-child {
+        margin-top: 20px;
+      }
+    }
   }
   &__wrap {
     border: 1px solid $form-border-color;
